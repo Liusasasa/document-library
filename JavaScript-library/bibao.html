@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Click Me</button>
+
+    <script type="text/javascript">
+        var btn = document.querySelector("button");
+
+        btn.addEventListener(
+            "click",
+            (function () {
+                // init the count to 0
+                var count = 0;
+
+                // your code here
+
+                return function add() {
+                    
+                    console.log(++count);
+                    if (count >= 5) {
+                        count = 0;
+                        alert("您已点击五次按钮");
+                    }
+                }
+                
+
+            })()
+        );
+
+
+
+    </script>
+</body>
+
+</html>
